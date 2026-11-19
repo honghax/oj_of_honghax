@@ -26,31 +26,9 @@ oj_of_honhax/
 ├── README.md                 # 本文件：项目说明与目录约定
 ├── example.md                # 格式参考（外部样例，不占用正式编号）
 │
-├── problems/                 # 题面
-│   ├── 0001.md
-│   ├── 0002.md
-│   ├── 0003.md
-│   └── 0004.md
-│
-├── solutions/                # 题解（与题面同编号）
-│   ├── 0001.md
-│   ├── 0002.md
-│   ├── 0003.md
-│   └── 0004.md
-│
-└── verify/                   # 验证代码（与题面同编号的文件夹）
-    ├── 0001/
-    │   ├── solution.cpp      # 参考实现（标程），可直接编译运行
-    │   └── brute.cpp         # 独立暴力/对拍器（可选，但强烈建议）
-    ├── 0002/
-    │   ├── solution.cpp
-    │   └── brute.cpp
-    ├── 0003/
-    │   ├── solution.cpp
-    │   └── brute.cpp
-    └── 0004/
-        ├── solution.cpp
-        └── brute.cpp
+├── problems/                 # 题面：<四位编号>.md（0001.md、0002.md、……）
+├── solutions/                # 题解：与题面同编号（0001.md、0002.md、……）
+└── verify/                   # 验证代码：<编号>/solution.cpp + brute.cpp
 ```
 
 ## 各目录与文件说明
@@ -125,6 +103,7 @@ problems/0001.md  ↔  solutions/0001.md  ↔  verify/0001/
 | 0002 | [湘北水文图：精确岸距场](problems/0002.md) | 10 星 | 专家 | [`1945/war3d`](https://github.com/honghax/1945.9.3)（水系到岸距离场 / 深度着色） | 400 组小图对拍；2500² + 1e5 询问约 0.62 s |
 | 0003 | [战略地图：标签避让](problems/0003.md) | 9 星 | 困难 | [`1945/war3d`](https://github.com/honghax/1945.9.3)（`DrawLabels` 屏幕空间避让） | 400 组小数据对拍；1024² 屏 + 1e5 标签约 0.66 s |
 | 0004 | [红石乐谱：和声预算](problems/0004.md) | 10 星 | 专家 | [`AutoRedStoneMusic`](https://github.com/honghax/AutoRedStoneMusic)（调度器并发发声上限 / 事件取舍） | 300 组子集枚举对拍；1e5 事件 + K=20 约 0.37 s |
+| 0005 | [语音克隆：随机流跳转](problems/0005.md) | 10 星 | 专家 | [`-MOSS-TTS-Nano-Cpp`](https://github.com/honghax/-MOSS-TTS-Nano-Cpp)（PCG64 兼容随机流 / 跳转） | 500 组小 K 对拍；205 组大 K 大整数对照；1e5 询问约 0.96 s |
 
 ## 新增一题的流程
 
