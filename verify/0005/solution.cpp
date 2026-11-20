@@ -1,13 +1,24 @@
 // 0005 - PCG64 随机流的 O(log K) 跳转（128 位 LCG 仿射幂）
 // 参考项目：E:\project\musicclone\moss-tts-cpp（main.cpp 的 next_random_ / NumPy PCG64 兼容实现）
 // 编译：g++ -O2 -std=c++17 -o solution solution.cpp
-#include <bits/stdc++.h>
+#include <cstdio>
+#include <iostream>
+#include <string>
+#include <vector>
 using namespace std;
 typedef unsigned long long ull;
 
 struct U128 { ull lo, hi; };
 
-// 64x64 -> 128
+#if defined(__SIZEOF_INT128__)
+// 64 位 g++ / clang：直接用编译器扩展
+using u128 = unsigned __int128;
+static inline U128 mul128(U128 a, U128 b) {
+    u128 x = ((u128)a.hi << 64 | a.lo) * ((u128)b.hi << 64 | b.lo);
+    return {(ull)x, (ull)(x >> 64)};
+}
+#else
+// MSVC / 32 位 MinGW 没有 __int128，用 64 位分肢乘法
 static inline void mul64(ull a, ull b, ull &lo, ull &hi) {
     ull a0 = a & 0xffffffffULL, a1 = a >> 32;
     ull b0 = b & 0xffffffffULL, b1 = b >> 32;
@@ -25,6 +36,7 @@ static inline U128 mul128(U128 a, U128 b) {
     mul64(a.lo, b.hi, lo3, hi3);
     return {lo, hi0 + lo2 + lo3};
 }
+#endif
 
 static inline U128 add128(U128 a, U128 b) {
     ull lo = a.lo + b.lo;
