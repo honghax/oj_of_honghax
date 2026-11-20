@@ -103,8 +103,8 @@ problems/0001.md  ↔  solutions/0001.md  ↔  verify/0001/
 | 0002 | [湘北水文图：精确岸距场](problems/0002.md) | 10 星 | 专家 | [`1945/war3d`](https://github.com/honghax/1945.9.3)（水系到岸距离场 / 深度着色） | 400 组小图对拍；2500² + 1e5 询问约 0.62 s |
 | 0003 | [战略地图：标签避让](problems/0003.md) | 9 星 | 困难 | [`1945/war3d`](https://github.com/honghax/1945.9.3)（`DrawLabels` 屏幕空间避让） | 400 组小数据对拍；1024² 屏 + 1e5 标签约 0.66 s |
 | 0004 | [红石乐谱：和声预算](problems/0004.md) | 10 星 | 专家 | [`AutoRedStoneMusic`](https://github.com/honghax/AutoRedStoneMusic)（调度器并发发声上限 / 事件取舍） | 300 组子集枚举对拍；1e5 事件 + K=20 约 0.37 s |
-| 0005 | [语音克隆：随机流跳转](problems/0005.md) | 9 星 | 困难 | [`-MOSS-TTS-Nano-Cpp`](https://github.com/honghax/-MOSS-TTS-Nano-Cpp)（PCG64 兼容随机流 / 跳转） | 500 组小 K 对拍；205 组大 K 大整数对照；两编译分支交叉验证；1e5 询问约 0.3 s |
-| 0006 | [跟拍相机：最少校准段](problems/0006.md) | 10 星 | 专家 | [`AutoRedStoneMusic`](https://github.com/honghax/AutoRedStoneMusic)（`cam_follow_plan` 轨迹压缩 / 最少校准段） | 800 组小数据对拍；N=3000 约 0.07 s |
+| 0005 | [语音克隆：NumPy 随机流复刻](problems/0005.md) | 10 星 | 专家 | [`-MOSS-TTS-Nano-Cpp`](https://github.com/honghax/-MOSS-TTS-Nano-Cpp)（SeedSequence + PCG64 跳转） | 300 组小 K 对拍；63 组大 K 与 NumPy 对照；1e5 询问约 0.10 s |
+| 0006 | [湘北水文：最低出溢面](problems/0006.md) | 10 星 | 专家 | [`1945/war3d`](https://github.com/honghax/1945.9.3)（DEM 水位 / Priority-Flood） | 100 组小图对拍；2500² + 1e5 询问约 2.3 s |
 
 ## 新增一题的流程
 
